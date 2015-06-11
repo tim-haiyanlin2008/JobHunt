@@ -1,0 +1,19 @@
+<H1>My Vote System</H1>
+<table width="500px" >
+<tr bgcolor="gray">
+<td>Name</td>
+<td>Description</td>
+<td>Vote_Count</td>
+<td>Vote</td>
+</tr>
+
+<?php foreach ($this->itemModel as $item){ ?>
+<tr>
+<td><?=$item["name"]?></td>
+<td><?=$item["description"]?></td>
+<td><?=$item["vote_count"]?></td>
+<td><a href="./vote/vote?itemId=<?=$item["id"]?>">Vote</a></td>
+</tr>
+
+<?php }?>
+</table>
