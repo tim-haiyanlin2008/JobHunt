@@ -1,4 +1,19 @@
 <?php
+//from this time we are going
+require_once 'DB.php'; 
+$dsn = 'mysql://teagroup:teagroup@localhost/teagroup'; 
+$options = array( 
+    'debug'       => 2, 
+    'portability' => DB_PORTABILITY_ALL, 
+); 
+$db =& DB::connect($dsn, $options); 
+if (DB::isError($db)) { 
+    die($db->getMessage()); 
+} 
+
+/////////
+
+
 
 require_once 'DB.php'; 
 $dsn = 'mysql://teagroup:teagroup@localhost/teagroup'; 
